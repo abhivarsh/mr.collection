@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mr. Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <% include partials/header%>
+
+    <% include partials/user-navigation%>
+
+    <main class="main">
+
+      <% include partials/site-navigation%>
+
+      <section class="mainContentFav">
+        <article class="favContent">
+          <%if(username.length !=0){%>
+            <%if(userItems.length > 0){%>
+              <a href="/addMyAccessory">
+                <button type="button" name="button" class="addMyAccessory">Add My Accessory</button>
+              </a>
+          <br>
+          <div class="favTable">
+            <table>
+              <tr>
+                <th>Accesory Name</th>
+                <th>Category</th>
+                <th>Rented</th>
+                <th>Rating</th>
+                <th>Action</th>
+              </tr>
+              <%for(var i=0;i < userItems.length; i++){%>
+              <tr>
+                <td>
+                  <a href="<%='/catalog/item/'+userItems[i].item.itemCode%>">
+                    <%= userItems[i].item.itemName%>
+                  </a>
+                  <%if(userId == userItems[i].item.sellerId){%>
+                      <span>*</span>
+                  <%}%>
+                </td>
+                <td><%= userItems[i].item.itemCategory%></td>
+                <td><%=userItems[i].rented%></td>
+                <td>
+                  <%for(var j =0; j< 5; j++){
+                    if(j < userItems[i].rating){%>
+                      <span class="fa fa-star"></span>
+                    <%}else{%>
+                        <span class="fa fa-star unChecked"></span>
+                    <%} }%>
+                </td>
+                <td>
+                  <div class="actions">
+                    <!-- <%for(var k=0;k < userItems.length; k++){
+                      if(userItems[k].item.itemCode != userItems[i].item.itemCode){%>
+                        <input type="hidden" name="hiddenItemList" value="<%= userItems[k].item.itemCode%>">
+                      <%}
+                    }%>
+                    <input type="hidden" name="hiddenItemCode" value="<%= userItems[i].item.itemCode%>"> -->
+                    <div class="update">
+                      <a class="" href="<%='/feedback?action=update&itemCode='+userItems[i].item.itemCode%>">
+                        <button type="submit" name="button">Update</button>
+                      </a>
+                    </div>
+                    <div class="delete">
+                      <a class="" href="<%='/myItems?action=delete&itemCode='+userItems[i].item.itemCode%>">
+                        <button type="submit" name="button">Delete</button>
+                      </a>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <%}%>
+            </table>
+            <span class="indicator">* indicates that you posted the product</span>
+          </div>
+          <%} else{%>
+            <p>No items to display!!</p>
+          <%}} else{%>
+            <p>Please login to see the items</p>
+          <%}%>
+        </article>
+      </section>
+
+      <% include partials/footer%>
+
+    </main>
+
+    <script src="../assets/js/script.js" charset="utf-8"></script>
+  </body>
+</html>

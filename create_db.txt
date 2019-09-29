@@ -1,0 +1,266 @@
+
+use mrCollection
+db.itemsData.drop()
+db.userData.drop()
+db.userItemData.drop()
+db.userRatedItemsData.drop()
+db.dropDatabase()
+show dbs
+use mrCollection
+db
+
+db.createCollection('itemsData');
+db.createCollection('userData');
+db.createCollection('userItemData');
+db.createCollection('userRatedItemsData');
+
+//users database
+db.userData.insertMany([
+{
+  'userId' : 'usr001',
+  'firstName' : 'Abhi',
+  'lastName' : 'Peddireddy',
+  'email' : 'abhi@collections.com',
+  'password':'abhi@2019'
+},
+{
+  'userId' : 'usr002',
+  'firstName' : 'Naga',
+  'lastName' : 'Reddy',
+  'email' : 'naga@collections.com',
+  'password':'naga@2019'
+}
+]);
+
+//items database
+db.itemsData.insertMany([
+{
+  itemCode:'SNE001',
+  itemName:'Sneakers',
+  itemCategory:'Shoes',
+  itemDescription:'soft and flexible very well equipped for running and training',
+  itemRating:0,
+  itemImg:'/images/category/shoes/sne001.jpeg',
+  itemSize:'Large',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:125,
+  itemCost:'$3 per day'
+},
+{
+  itemCode:'BTS001',
+  itemName:'Boots',
+  itemCategory:'Shoes',
+  itemDescription:'Made with genuine leather, brown coloured and very comfortable to wear. Suits on any kind of trousers',
+  itemRating:0,
+  itemImg:'/images/category/shoes/bts001.jpg',
+  itemSize:'Large',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:15,
+  itemCost:'$2 per day'
+},
+{
+  itemCode:'SS001',
+  itemName:'Slip-on Shoes',
+  itemCategory:'Shoes',
+  itemDescription:'Casual wear shoes. Cloth material. It works on shorts and on casual jeans.',
+  itemRating:0,
+  itemImg:'/images/category/shoes/ss001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:12,
+  itemCost:'$7 per day'
+},
+{
+  itemCode:'BS001',
+  itemName:'Boat Shoes',
+  itemCategory:'Shoes',
+  itemDescription:'These shoes can be worn casually or even formal. Very flexible and made with genuine leather.',
+  itemRating:0,
+  itemImg:'/images/category/shoes/bs001.jpg',
+  itemSize:'Large',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:1254,
+  itemCost:'$10 per day'
+},
+{
+  itemCode:'MC001',
+  itemName:'Moccasin',
+  itemCategory:'Shoes',
+  itemDescription:'Made with genuine leather. Suits on both formal and casual clothings.',
+  itemRating:0,
+  itemImg:'/images/category/shoes/mc001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:167,
+  itemCost:'$16 per day'
+},
+{
+  itemCode:'OS001',
+  itemName:'Oxford Shoes',
+  itemCategory:'Shoes',
+  itemDescription:'Black formal shoes made with genuine leather, suits on suits and formal wearing.',
+  itemRating:0,
+  itemImg:'/images/category/shoes/os001.jpeg',
+  itemSize:'Small',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:25,
+  itemCost:'$15 per day'
+},
+{
+  itemCode:'CW001',
+  itemName:'Chronograph Watches',
+  itemCategory:'Watches',
+  itemDescription:'silver metal chain strap having a big face to the watch. Has chronographs.',
+  itemRating:0,
+  itemImg:'/images/category/watches/CW001.jpg',
+  itemSize:'Large',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:15,
+  itemCost:'$5 per day'
+},
+{
+  itemCode:'AW001',
+  itemName:'Automatic Watches',
+  itemCategory:'Watches',
+  itemDescription:'Can be used on formal wear and works without any batteries.',
+  itemRating:0,
+  itemImg:'/images/category/watches/AW001.jpg',
+  itemSize:'Large',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:5,
+  itemCost:'$20 per day'
+},
+{
+  itemCode:'MW001',
+  itemName:'Mechanical Watches',
+  itemCategory:'Watches',
+  itemDescription:'leather strap with a big watch face',
+  itemRating:0,
+  itemImg:'/images/category/watches/MW001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:8,
+  itemCost:'$10 per day'
+},
+{
+  itemCode:'SW001',
+  itemName:'Sports Watches',
+  itemCategory:'Watches',
+  itemDescription:'water proof, plastic strap looks cool on both formal and semi formal clothings. Orange strap.',
+  itemRating:0,
+  itemImg:'/images/category/watches/SW001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:3,
+  itemCost:'$5 per day'
+}
+]);
+
+//user saved items database
+db.userItemData.insertMany([
+{
+userId:'usr001',
+item : {
+  itemCode:'SNE001',
+  itemName:'Sneakers',
+  itemCategory:'Shoes',
+  itemDescription:'soft and flexible very well equipped for running and training',
+  itemRating:0,
+  itemImg:'/images/category/shoes/sne001.jpeg',
+  itemSize:'Large',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:125,
+  itemCost:'$3 per day'
+},
+rating : 4,
+rented : 'Yes'
+},
+{
+userId:'usr001',
+item : {
+  itemCode:'OS001',
+  itemName:'Oxford Shoes',
+  itemCategory:'Shoes',
+  itemDescription:'Black formal shoes made with genuine leather, suits on suits and formal wearing.',
+  itemRating:0,
+  itemImg:'/images/category/shoes/os001.jpeg',
+  itemSize:'Small',
+  sellerId:'usr002',
+  itemSellerInfo:'',
+  itemSellerRating:25,
+  itemCost:'$15 per day'
+},
+rating : 4,
+rented : 'Yes'
+},
+{
+userId:'usr001',
+item : {
+  itemCode:'MC001',
+  itemName:'Moccasin',
+  itemCategory:'Shoes',
+  itemDescription:'Made with genuine leather. Suits on both formal and casual clothings.',
+  itemRating:0,
+  itemImg:'/images/category/shoes/mc001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:167,
+  itemCost:'$16 per day'
+},
+rating : 1,
+rented : 'Yes'
+},
+{
+userId:'usr002',
+item : {
+  itemCode:'SW001',
+  itemName:'Sports Watches',
+  itemCategory:'Watches',
+  itemDescription:'water proof, plastic strap looks cool on both formal and semi formal clothings. Orange strap.',
+  itemRating:0,
+  itemImg:'/images/category/watches/SW001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:3,
+  itemCost:'$5 per day'
+},
+rating : 5,
+rented : 'No'
+}
+]);
+
+
+//user rated items which are not yet saved
+db.userRatedItemsData.insert(
+{
+userId:'usr001',
+item : {
+  itemCode:'SW001',
+  itemName:'Sports Watches',
+  itemCategory:'Watches',
+  itemDescription:'water proof, plastic strap looks cool on both formal and semi formal clothings. Orange strap.',
+  itemRating:0,
+  itemImg:'/images/category/watches/SW001.jpg',
+  itemSize:'Medium',
+  sellerId:'usr001',
+  itemSellerInfo:'',
+  itemSellerRating:3,
+  itemCost:'$5 per day'
+},
+rating : 5,
+rented : 'No'
+}
+);

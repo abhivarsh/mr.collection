@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mr. Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/contactUsStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <% include partials/header%>
+
+    <% include partials/user-navigation%>
+
+    <main class="main">
+
+      <% include partials/site-navigation%>
+
+      <section class="mainContentContactUs">
+        <article class="favContent">
+          <div class="contactUsInfo">
+            <span>
+              <p class="head">Add Your Accessory Here:</p>
+            </span>
+            <div class="contactUsForm">
+              <form class="" action="/addAccessory" method="post" enctype="multipart/form-data">
+                <label for="itemName">Item Name:</label><br>
+                <input type="text" name="itemName" value="" required><br><br>
+                <label for="itemImg">Item Image:</label><br>
+                <input type="file" name="itemImg" value="" required><br><br>
+                <label for="itemCategory">Item Category:</label><br>
+                <select class="itemCategory" name="itemCategory" required>
+                  <option value=""></option>
+                  <%categories.forEach(function(category){%>
+                    <option value="<%=category%>"><%=category%></option>
+                  <%})%>
+                </select><br><br>
+                <label for="itemDescription">Item Description:</label><br>
+                <textarea name="itemDescription" rows="8" cols="80" required></textarea><br>
+                <label for="itemSize">Item Size:</label><br>
+                <input type="text" name="itemSize" value="" required><br><br>
+                <label for="itemCost">Item Cost (per day):</label><br>
+                <input type="number" name="itemCost" value="" required min="0"><br><br>
+                <input type="submit" name="addAccessory" value="Add My Accessory" id="submit">
+              </form>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <% include partials/footer%>
+
+    </main>
+
+    <script src="../assets/js/script.js" charset="utf-8"></script>
+  </body>
+</html>

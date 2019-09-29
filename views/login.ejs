@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mr. Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/contactUsStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <% include partials/header%>
+
+    <% include partials/user-navigation%>
+
+    <main class="main">
+
+      <% include partials/site-navigation%>
+
+      <section class="mainContentContactUs">
+        <article class="favContent">
+
+          <div class="contactUsInfo">
+            <span>
+              <p class="color">Login Here!!</p><br>
+            </span>
+            <span class="error">
+              <% if(error.length != 0){%>
+                <p><%= error%></p>
+                <%}%>
+            </span>
+            <br>
+            <form class="" action="/login" method="post">
+              <div class="contactUsForm">
+                <label for="userId">User ID:</label><br>
+                <input type="text" name="userId" value=""><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" value=""><br><br>
+                <input type="submit" name="submit" value="Login" id="submit">
+              </div>
+            </form>
+            <br>
+            <span class="registerLink">Don't have an account?&nbsp;&nbsp;<a href="/register">Create Account</a></span>
+          </div>
+        </article>
+      </section>
+
+      <% include partials/footer%>
+
+    </main>
+
+    <script src="../assets/js/script.js" charset="utf-8"></script>
+  </body>
+</html>

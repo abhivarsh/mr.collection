@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mr. Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+
+    <% include partials/header%>
+
+    <% include partials/user-navigation%>
+
+    <main class="main">
+
+      <% include partials/site-navigation%>
+
+      <section class="mainContentCatalog">
+        <article class="catalogContent">
+          <div class="c1">
+            <h2><%= data.list[0]%></h2>
+            <ul>
+              <% for(var i = 0; i< data.items.length; i++ ){
+                if(data.list[0] == data.items[i].itemCategory){%>
+                  <li>
+                    <a href="../catalog/item/<%= data.items[i].itemCode%>"><%= data.items[i].itemName%></a></li>
+                <%}
+              }%>
+            </ul>
+          </div>
+          <div class="c2">
+            <h2><%= data.list[1]%></h2>
+            <ul>
+              <% for(var j = 0; j< data.items.length; j++ ){
+                if(data.list[1] == data.items[j].itemCategory){%>
+                  <li><a href="../catalog/item/<%= data.items[j].itemCode%>"><%= data.items[j].itemName%></a></li>
+                <%}
+              }%>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <% include partials/footer%>
+
+    </main>
+
+    <script src="../assets/js/script.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mr. Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+
+    <% include partials/header%>
+
+    <% include partials/user-navigation%>
+
+    <main class="main">
+
+      <% include partials/site-navigation%>
+
+      <section class="mainContentItem">
+        <article class="catalogItem">
+          <div class="path">
+            <p>
+              <a href="/">Home</a>&nbsp;/
+              <a href="/catalog">Catolog</a>&nbsp;/
+              <a href="<%= url%>"><%= item.itemName%></a>
+            </p>
+          </div>
+          <div class="item">
+            <div class="itemImage">
+              <img src="<%= item.itemImg%>" alt="<%= item.itemDescription%>">
+              <br><br><br>
+              <% if(username.length !== 0){%>
+              <div class="actionsOnItem">
+                <table>
+                  <tr>
+                    <td>
+                      <div class="rate">
+                        <a href="<%= '/feedback?action=rate&itemCode='+item.itemCode%>">
+                          <button type="button" name="rateButton">Rate</button>
+                        </a>
+                      </div>
+                    </td>
+                    <% if(item.sellerId == userId){%>
+                      <td>
+                        <div class="edit">
+                          <a href="<%= '/editMyAccessory?itemCode='+item.itemCode%>">
+                            <button type="button" name="edit">Edit</button>
+                          </a>
+                        </div>
+                      </td>
+                    <%}%>
+                    <td>
+                      <div class="save">
+                        <a href="<%= '/myItems?action=save&itemCode='+item.itemCode%>">
+                          <button type="submit" name="button">Save</button>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <%}else{%>
+                <div class="actionsOnItem">
+                  <span>Login to perform actions on this item!!</span>
+                </div>
+              <%}%>
+            </div>
+          <div class="itemDescription">
+            <div class="description">
+              <h3><%= item.itemName%></h3>
+              <p>Product ID: <%= item.itemCode%></p>
+              <br>
+              <h3><%= item.itemCost%></h3>
+              <br>
+              <p><b>Size:</b> <%= item.itemSize%></p>
+              <p><%= item.itemDescription%></p>
+              <p><b>Seller Info: </b><%= item.itemSellerInfo%></p>
+              <p><b>No. of Seller Rating: </b><%= item.itemSellerRating%></p>
+              <br>
+              <% if(username.length !== 0){
+                    for(var j=0; j< 5; j++){
+                      if(j < rating){%>
+                        <span class="fa fa-star"></span>
+                      <%}else{%>
+                        <span class="fa fa-star unChecked"></span>
+                      <%}
+                    }
+                  }%>
+                <br>
+              <button type="button" name="button" class="addToCart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        </article>
+      </section>
+
+      <% include partials/footer%>
+
+    </main>
+  </body>
+</html>

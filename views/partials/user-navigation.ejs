@@ -1,0 +1,16 @@
+<nav class="nav">
+  <div class="navigation">
+    <ul>
+      <% if(username.length !== 0){%>
+        <li><a href="/signOut">Sign Out</a></li>
+      <%}else{%>
+        <li><a href="/signIn">Sign In</a></li>
+      <%}%>
+      <li><a href="../../../myItems">My Favorite Accessories</a></li>
+      <% if(username.length !== 0){%>
+        <li><a href="../../../myRatedItems">My Rated Accessories</a></li>
+      <%}%>
+      <li><a href="#">Cart</a></li>
+    </ul>
+  </div>
+</nav>

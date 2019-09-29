@@ -1,0 +1,73 @@
+.contactUsForm{
+  width: 50%;
+  padding-top: 2%;
+  color:#D4AF37;
+}
+.contactUsForm input{
+  width: 63.5%;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-weight: bold;
+  padding: 8px 20px;
+  margin-top: 8px;
+}
+.contactUsForm textarea{
+  max-width: 63.5%;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+.contactUsForm #submit{
+  width: 69%;
+  align-items: center;
+  color:#D4AF37;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding: 1% 1%;
+  font-size: 120%;
+  border-radius:5px;
+  font-weight: bold;
+}
+.contactUsForm #submit:hover{
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #D4AF37;
+}
+.contactUsInfo{
+  padding-top: 2%;
+  color:black;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+.contactUsInfo .color{
+  color:#D4AF37;
+  font-weight: bold;
+  font-size: 160%;
+}
+.mainContentContactUs .head{
+  color: black;
+  font-weight: bold;
+  font-size: 160%;
+}
+.favContent{
+  padding-left: 10%;
+}
+.error{
+  color: red;
+}
+.registerLink a{
+  color: #D4AF37;
+  font-weight: bold;
+  text-decoration: none;
+}
+.itemCategory{
+  width: 63.5%;
+}

@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+main, aside, header, nav, section, article, footer {
+  display: block;
+}
+
+html, body{
+  height: 100%;
+  position: relative;
+}
+
+h1, h2, h3, ul, li, a, p, div{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.banner{
+  padding-left: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #D4AF37;
+  font-size: 50%;
+  background-color: black;
+}
+.banner p{
+  font-size: 130%;
+}
+.logo h1{
+  font-family: Snell Roundhand;
+  color: #D4AF37;
+  float: left;
+  padding-left: 4%;
+  padding-top: 1%;
+}
+.loggedInUser p{
+  color: #D4AF37;
+  float: right;
+  padding-right: 2%;
+  padding-top: 1%;
+}
+.footer{
+  margin-top: 2%;
+  padding-top: 1%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+.watermark{
+  color: #D4AF37;
+  font-size: 70%;
+  margin-top: 0.5%;
+  margin: 0 auto;
+  padding-bottom: 1%;
+}
+.socialMediaLinks{
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+}
+.socialMediaLinks a img{
+  width: 1%;
+  height: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.socialMediaLinks a:nth-child(2) img,.socialMediaLinks a:nth-child(3) img{
+  width: 1.5%;
+}
+.nav{
+  margin-top: 2%;
+  text-align: center;
+}
+.navigation{
+  display: inline;
+}
+.navigation li{
+  display: inline;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.navigation a{
+  color: #D4AF37;
+  text-decoration: none;
+  font-family: cursive;
+  padding: 1% 1% 1% 1%;
+  border: 2px solid transparent;
+  font-weight: bolder;
+}
+
+.navigation a:hover{
+  background-color: black;
+  -moz-border-radius:20px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border: 2px solid #D4AF37;
+}
+.myFav{
+  background-color: black;
+  -moz-border-radius:20px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  border: 2px solid #D4AF37;
+}
+.main{
+  width: 100%;
+  position: relative;
+  margin-top: 2%;
+  bottom: -10px;
+}
+.mainContent{
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+  display: block;
+  padding-bottom: 10%;
+  background-image: url(../images/bg.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:bottom;
+}
+.content1{
+  color: #D4AF37;
+  padding: 5% 0 0 10%;
+  background-color: rgb(0,0,0,0.5);
+}
+.content1 p{
+  color:white;
+  padding-bottom: 2%;
+}
+.asiderWrapper a{
+  color: #D4AF37;
+  text-decoration: none;
+  font-family: cursive;
+  padding: 2% 2% 2% 2%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.sideNav{
+  margin-top: 7%;
+  text-align: left;
+  float: left;
+  width: 15%;
+  padding-left: 2%;
+}
+.sideNavigation li{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  list-style-type: none;
+}
+.sideNavigation a{
+  text-decoration: none;
+  font-family: cursive;
+  font-size: 120%;
+  color: #D4AF37;
+  font-weight: bolder;
+}
+.home{
+  background-color: #D4AF37;
+  color:white !important;
+  padding-left: 30%;
+  padding-right: 5%;
+ }
+ .catalog{
+   background-color: #D4AF37;
+   color:white !important;
+   padding-left: 30%;
+   padding-right: 5%;
+ }
+.sideNavigation li a:hover{
+  background-color: #D4AF37;
+  color:white;
+  padding-left: 30%;
+  padding-right: 5%;
+}
+
+.mainContentCatalog{
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+  display: block;
+}
+.mainContentFav, .mainContentItem, .mainContentAbout, .mainContentContactUs{
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+  display: block;
+}
+.mainContentCatalog{
+  padding-left: 5%;
+  padding-top: 2%;
+  background-image: url(../images/background.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:bottom;
+}
+.c2{
+  margin-top: 3%;
+}
+.c1 h2, .c2 h2{
+  color: #D4AF37;
+  background-color: rgb(0,0,0,0.5);
+  padding-left: 5%;
+  width: 40%;
+}
+.c1 a, .c2 a,.c1 li, .c2 li{
+  text-decoration:none;
+  color: white;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+.c1 ul, .c2 ul{
+  margin-top: 1%;
+}
+.c1 a:hover,.c2 a:hover{
+  background-color: #D4AF37;
+  color:white;
+  padding-left: 15%;
+  padding-right: 5%;
+}
+.path{
+  padding: 2% 0 0 2%;
+}
+.path a{
+  text-decoration: none;
+  color: #D4AF37;
+}
+.path a:hover{
+  text-decoration: underline;
+}
+
+.itemImage{
+  min-height: 50vh;
+  position: relative;
+  float: left;
+}
+.itemDescription{
+  min-height: 50vh;
+  position: relative;
+  width: 58%;
+  float: right;
+  margin-right: 4%;
+}
+.description{
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.item{
+  margin-top: 2%;
+  min-height: 50vh;
+  margin-bottom: 2%;
+}
+.itemImage{
+  width: 30%;
+  margin-left: 2%;
+  padding-left: 2%;
+  padding-bottom: 10%;
+}
+.description{
+  padding-left: 6%;
+  font-size: 80%;
+  color: #D4AF37;
+}
+.addToCart{
+  width: 90%;
+  align-items: center;
+  color:#D4AF37;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  position: absolute;
+  bottom: 0;
+  font-weight: bold;
+  padding: 1% 1%;
+  font-size: 120%;
+}
+.addToCart:hover{
+  border: 1px solid #D4AF37;
+  background-color: white;
+  cursor: pointer;
+}
+.itemImage img{
+  max-width: 85%;
+}
+
+.rate button, .save button, .edit button{
+  color: #D4AF37;
+  width: 60%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-weight: bold;
+}
+.rate button:hover, .save button:hover, .edit button:hover{
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #D4AF37;
+}
+.actionsOnItem table{
+  width: 100%;
+}
+.addMyAccessory{
+  width: 20%;
+  align-items: center;
+  margin-right: 4%;
+  margin-top: 1%;
+  color:#D4AF37;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding: 1% 1%;
+  border-radius:5px;
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+}
+.mainContentFav{
+  padding-left: 5%;
+  padding-top: 2%;
+  background-image: url(../images/bg2.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:bottom;
+}
+.mainContentFav p{
+  color:#D4AF37;
+  font-size: 150%;
+  padding-top:10%;
+}
+.addMyAccessory:hover{
+  cursor: pointer;
+  border: 1px solid #D4AF37;
+  background-color: rgb(0,0,0,0.5);
+}
+.favTable{
+  align-items: center;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.favTable{
+  background:rgb(0,0,0,0.5);
+  margin-right: 4%;
+  margin-bottom: 10%;
+}
+.favTable table{
+  padding:4% 2% 2% 2%;
+  width: 100%;
+}
+.favTable table th, .favTable table td{
+  width: 18%;
+}
+.favTable table th{
+  background: black;
+  color: #D4AF37;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 120%;
+}
+.favTable table tr td a{
+  color:#D4AF37;
+  padding-left: 2%;
+}
+.favTable table tr td{
+  color:#D4AF37;
+  padding-left: 2%;
+}
+.update,.delete{
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.update button, .delete button{
+  align-items: center;
+  margin-right: 2%;
+  margin-top: 1%;
+  color:#D4AF37;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-size: 80%;
+  width:110%;
+}
+.update button:hover, .delete button:hover{
+  cursor: pointer;
+  border: 1px solid #D4AF37;
+  background-color: rgb(0,0,0,0.2);
+}
+.favTable table .unChecked{
+  color: black;
+}
+.catalogContent{
+  margin-bottom: 10%;
+}
+.description p{
+  margin-top: 2%;
+}
+.rateForm table{
+  width: 100%;
+}
+.rateForm button{
+  width: 100%;
+  align-items: center;
+  margin-right: 2%;
+  margin-top: 1%;
+  color:#D4AF37;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-size: 100%;
+}
+.rateForm button:hover{
+  cursor: pointer;
+  border: 1px solid #D4AF37;
+  background-color: white;
+}
+.item span p{
+  padding-left: 30%;
+  color: #D4AF37;
+  font-weight: bold;
+}
+.rateForm select{
+  border: 1px solid #D4AF37;
+
+}
+.itemDescription .unChecked{
+  color: black;
+}
+.indicator{
+  margin-left: 3%;
+  color: #D4AF37;
+}

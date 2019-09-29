@@ -1,0 +1,40 @@
+.about1, .about2{
+  float: left;
+  padding-left: 15%;
+  padding-top: 5%;
+  width: 20%;
+}
+.about2{
+  padding-top: 3%;
+}
+.about1 span p, .about2 span p{
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: black;
+}
+.joinUs{
+  position: absolute;
+  bottom: 10%;
+  margin-left: 25%;
+}
+.joinUs span p button{
+  width: 300%;
+  margin:10%;
+  color:#D4AF37;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: black;
+  border: 1px solid black;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  font-size: 120%;
+  font-weight: bold;
+}
+.joinUs span p button:hover{
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #D4AF37;
+}
